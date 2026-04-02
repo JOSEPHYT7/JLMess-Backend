@@ -20,6 +20,9 @@ initCronTasks();
 
 const app = express();
 
+// Trust Proxy (Mandatory for Render/Vercel)
+app.set('trust proxy', 1);
+
 // Security
 app.use(helmet());
 
